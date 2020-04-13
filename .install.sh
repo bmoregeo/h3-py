@@ -4,6 +4,7 @@ set -ex
 
 VERSION=$1
 IS_64BITS=$2
+OS=Windows_NT
 
 if [ "" == "$VERSION" ]; then
     echo "Failed to specify version required"
@@ -38,7 +39,7 @@ else
   # Assumed to be Windows, default to x86
   if [[ "True" == "$IS_64BITS" ]]; then
     # to build on win 10 with VS 16 use this command:
-    cmake . -DENABLE_FORMAT=OFF -DBUILD_SHARED_LIBS=ON -A x64
+    cmake . -DENABLE_FORMAT=OFF -DBUILD_SHARED_LIBS=ON -A x64 -G "Visual Studio 16 2019"
   else
     cmake . -DENABLE_FORMAT=OFF -DBUILD_SHARED_LIBS=ON
   fi

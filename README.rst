@@ -34,6 +34,10 @@ Installing on Windows
 On Windows you will also need to have ``bash`` (for example from Git)
 installed.
 
+Follow instructions from this [stack overflow post](https://stackoverflow.com/a/59349319).
+
+
+
 Development
 ===========
 
